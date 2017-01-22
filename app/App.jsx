@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
-import {Router, Route, IndexRoute} from 'react-router'
-// import 'semanticJS'
-// import 'semanticCSS'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import 'semanticJS'
+import 'semanticCSS'
 // import './app.styl'
 
 class App extends React.Component {
@@ -13,9 +13,9 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-  <Router>
+  <Router history={browserHistory}>
     <Route path='/' component={App}>
     </Route>
   </Router>
-, document.getElementsById('body'));
+, document.getElementById('root'));
 
